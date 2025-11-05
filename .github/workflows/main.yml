@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get theme from raw.github
-        run: curl -O themes/barbosa.css https://raw.githubusercontent.com/dvanael/marp-barbosa/main/themes/barbosa.css
+        run: mkdir themes && curl -L -o themes/barbosa.css https://raw.githubusercontent.com/dvanael/marp-barbosa/refs/heads/main/theme/barbosa.css
 
       - name: Ensure build dir exists
         run: mkdir -p build
