@@ -44,10 +44,11 @@ Existem diversas oportunidades de pesquisa e desenvovimento como:
 * Internet Industrial das Coisas (IIoT)
 
 ---
+<!-- _class: style_b -->
 
 ### Exemplo de CPS
 
-![imagem-de-robo-na-agricultura](./img/image1.png)
+![w:600px](./img/image1.png)
 Robô na agricultura
 
 ---
@@ -76,14 +77,21 @@ Na AADL, um componente é caracterizado por seu nome único, interfaces, propied
 A AADL pode ser usada para modelar e analisar sistemas em uso, prototipar e integrar novos sistemas. Com essa linguagem, conjuntos de propriedades podem ser declarados, permitindo a inclusão de novas propriedades para outros componenetes ou elementos, como portas e conexões.
 
 ---
-### Robot Operating System (ROS)
+<!-- _class: style_b -->
+## Robot Operating System (ROS)
 
-O ROS é uma coleção de bibliotecas e ferramentas robóticas de código-aberto voltadas para a contrução de softwares de robôs. 
+O ROS é uma coleção de bibliotecas e ferramentas robóticas de código-aberto voltadas para a contrução de softwares de robôs. Oferecendo uma plataforma de desenvolvimento que acompanha o projeto desde da prototipação até a implementação.
 
 ---
-### Para que o ROS serve?
+### Propósito e Utilização
 
-O ROS abstrai toda a camada de _hardware_ e facilitar a configuração de cada parte do robô através dos pacotes de seu ecossistema.
+O ROS abstrai toda a camada de _hardware_ e facilitar a configuração de cada parte do robô através dos pacotes de seu ecossistema. Dessa forma, o ROS permite que o desenvolvedor se dedique a outros aspectos do projeto, como lógica e algoritimos.
+
+---
+
+## Uso da AADL com ROS
+
+A AADL atua na modelagem e validação da arquitetura do sistema. O ROS é utilizado para 
 
 ---
 <style scoped>section { font-size: 20px; }</style>
@@ -95,3 +103,7 @@ O ROS abstrai toda a camada de _hardware_ e facilitar a configuração de cada p
 *Presentation of the AADL: Architecture Analysis and Design Language.* Disponível em: https://beru.univ-brest.fr/~singhoff/ENS/UE_VFS/CM/part1_introducing_aadl.pdf
 
 *Cyber-physical Systems.* Disponível em: https://ieeecss.org/sites/ieeecss/files/2019-07/IoCT-Part3-02CyberphysicalSystems.pdf
+
+*A use case in model-based robot development using AADL and ROS.* Disponível em: https://rose-workshops.github.io/files/rose2018/papers/rose2018_2.pdf
+
+ROS - Robotic Operating System. Disponível em: https://www.ros.org/
