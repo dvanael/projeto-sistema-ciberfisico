@@ -65,7 +65,21 @@ Podem representar sistemas complexos de sistemas, como a intregração de softwa
 
 ---
 
-## Exemplo de Abstração
+## Elementos Robóticos
+
+Antes de abstrair um sistema, é necessário compreender seus elementos. No nosso caso, elementos robóticos.
+
+* **Sensores** interpretam difenrentes aspectos do ambiente.
+  _Ex_: Ultrasom, Câmeras
+
+* **Atuadores** covertem energia armazenada em movimento.
+  Podem ser hidráulicos, elétricos, ou pneumáticos.
+  _Ex. Eletríco_: Servomotores
+
+---
+<!-- _class: style_b -->
+
+## Exemplos de Abstração
 <style scoped>img {position: absolute; left: 55%;}</style>
 
 ![w:500px](./img/image2.png)
