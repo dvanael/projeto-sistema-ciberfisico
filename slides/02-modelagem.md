@@ -117,3 +117,10 @@ end MicroServo;
 
 ## Referências
 
+_The Architecture Analysis & Design Language (AADL): An Introduction._
+
+_Multi-Paradigm Modeling for early Analysis of ROS-based Robotic Applications using a Library of AADL Models._
+
+_Elements of Robotics._
+
+_Robot Actuators: A Comprehensive Guide to Types, Design, and Emerging Trends_. https://www.wevolver.com/article/robotic-actuators-the-muscle-power-of-industry-40
