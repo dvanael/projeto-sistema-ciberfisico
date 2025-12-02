@@ -43,6 +43,8 @@ jobs:
 
       - name: Ensure build dir exists
         run: mkdir -p build
+
+      - name: Ensure fichamento dir exists
         run: mkdir -p build/fichamento
 
       - name: Copy images directory (if exists)
