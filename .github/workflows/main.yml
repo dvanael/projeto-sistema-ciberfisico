@@ -49,6 +49,8 @@ jobs:
 
       - name: Copy images directory (if exists)
         run: if [[ -d slides/img ]]; then cp -R slides/img build/img; fi
+
+      - name: Copy images directory fichamento (if exists)
         run: if [[ -d fichamento/img ]]; then cp -R fichamento/img build/fichamento/img; fi
 
       - name: Marp Build html (build folder)
