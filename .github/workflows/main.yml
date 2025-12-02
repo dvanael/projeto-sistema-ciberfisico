@@ -43,9 +43,11 @@ jobs:
 
       - name: Ensure build dir exists
         run: mkdir -p build
+        run: mkdir -p build/fichamento
 
       - name: Copy images directory (if exists)
         run: if [[ -d slides/img ]]; then cp -R slides/img build/img; fi
+        run: if [[ -d fichamento/img ]]; then cp -R fichamento/img build/fichamento/img; fi
 
       - name: Marp Build html (build folder)
         uses: docker://marpteam/marp-cli:v4.1.1
@@ -54,10 +56,24 @@ jobs:
         env:
           MARP_USER: root:root
 
+      - name: Marp Build html (fichamento folder)
+        uses: docker://marpteam/marp-cli:v4.1.1
+        with:
+          args: -I fichamento/ -o build/fichamento --set-theme slides/themes/barbosa.css
+        env:
+          MARP_USER: root:root
+
       - name: Marp Build pdf (build folder)
         uses: docker://marpteam/marp-cli:v4.1.1
         with:
           args: --pdf --pdf-outlines --allow-local-files -I slides/ -o build/ --set-theme slides/themes/barbosa.css
+        env:
+          MARP_USER: root:root
+
+      - name: Marp Build pdf (fichamento folder)
+        uses: docker://marpteam/marp-cli:v4.1.1
+        with:
+          args: --pdf --pdf-outlines --allow-local-files -I fichamento/ -o build/fichamento --set-theme slides/themes/barbosa.css
         env:
           MARP_USER: root:root
 
