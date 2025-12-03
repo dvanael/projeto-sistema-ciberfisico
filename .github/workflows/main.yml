@@ -31,9 +31,11 @@ jobs:
       # Baixa o tema e coloca em themes/
       - name: Get theme from raw.github
         run: |
-          mkdir -p themes
-          curl -L -o themes/barbosa.css \
+          mkdir -p slides/theme
+          mkdir -p fichamento/theme
+          curl -L -o slides/theme/barbosa.css \
             https://raw.githubusercontent.com/dvanael/marp-barbosa/refs/heads/main/theme/barbosa.css
+          cp slides/theme/barbosa.css fichamento/theme/barbosa.css
 
       # Diretórios de saída
       - name: Ensure build dirs
@@ -51,28 +53,28 @@ jobs:
       - name: Marp Build HTML (slides)
         uses: docker://marpteam/marp-cli:v4.1.1
         with:
-          args: -I slides/ -o build/ --set-theme themes/barbosa.css
+          args: -I slides/ -o build/ --set-theme theme/barbosa.css
         env:
           MARP_USER: root:root
 
       - name: Marp Build HTML (fichamento)
         uses: docker://marpteam/marp-cli:v4.1.1
         with:
-          args: -I fichamento/ -o build/fichamento --set-theme themes/barbosa.css
+          args: -I fichamento/ -o build/fichamento --set-theme theme/barbosa.css
         env:
           MARP_USER: root:root
 
       - name: Marp Build PDF (slides)
         uses: docker://marpteam/marp-cli:v4.1.1
         with:
-          args: --pdf --pdf-outlines -I slides/ -o build/ --set-theme themes/barbosa.css
+          args: --pdf --pdf-outlines -I slides/ -o build/ --set-theme theme/barbosa.css
         env:
           MARP_USER: root:root
 
       - name: Marp Build PDF (fichamento)
         uses: docker://marpteam/marp-cli:v4.1.1
         with:
-          args: --pdf --pdf-outlines -I fichamento/ -o build/fichamento --set-theme themes/barbosa.css
+          args: --pdf --pdf-outlines -I fichamento/ -o build/fichamento --set-theme theme/barbosa.css
         env:
           MARP_USER: root:root
 
