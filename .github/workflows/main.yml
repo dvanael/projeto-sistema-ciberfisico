@@ -65,14 +65,14 @@ jobs:
       - name: Marp Build PDF (slides)
         uses: docker://marpteam/marp-cli:v4.1.1
         with:
-          args: --pdf --pdf-outlines --allow-local-files -I slides/ -o build/ --set-theme themes/barbosa.css
+          args: --pdf --pdf-outlines -I slides/ -o build/ --set-theme themes/barbosa.css
         env:
           MARP_USER: root:root
 
       - name: Marp Build PDF (fichamento)
         uses: docker://marpteam/marp-cli:v4.1.1
         with:
-          args: --pdf --pdf-outlines --allow-local-files -I fichamento/ -o build/fichamento --set-theme themes/barbosa.css
+          args: --pdf --pdf-outlines -I fichamento/ -o build/fichamento --set-theme themes/barbosa.css
         env:
           MARP_USER: root:root
 
@@ -82,7 +82,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build'   # apenas o build, e NÃO o repo inteiro
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
